@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Highlight Explorer",
+    "description": "You highlight we explore",
+    "version": "1.0",
+    "action": {
+      "default_popup": "tab.html",
+      "default_icon": "default_icon.png"
+    },
+    "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["*://*/*"],
+    "js": ["content.js"]
+  }],
+    "permissions": ["activeTab", "scripting"]
+  }
